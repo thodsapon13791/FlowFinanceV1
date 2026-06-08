@@ -738,8 +738,8 @@ body{font-family:system-ui,-apple-system,sans-serif;background:var(--bg0);color:
 // 1. ไปที่ https://supabase.com → สร้าง Project ใหม่
 // 2. Settings → API → copy "Project URL" และ "anon public key"
 // 3. วางด้านล่างนี้
-var SUPA_URL = 'https://YOUR_PROJECT_ID.supabase.co';  // << เปลี่ยน
-var SUPA_KEY = 'YOUR_ANON_PUBLIC_KEY';                  // << เปลี่ยน
+var SUPA_URL = 'https://bucnbgamejerrdupsdro.supabase.co';  // << เปลี่ยน
+var SUPA_KEY = 'sb_publishable_MZHKVmPF7g73wSxPYYx1Kg_BusmtRnk';                  // << เปลี่ยน
 // รองรับทั้ง 2 format:
 //   format ใหม่: sb_publishable_xxxx  (Publishable key)
 //   format เก่า: eyJxxxx              (Legacy anon key)
@@ -816,8 +816,8 @@ var AuthManager = {
   _configured: false,
 
   init: function() {
-    this._configured = SUPA_URL !== 'https://YOUR_PROJECT_ID.supabase.co'
-                    && SUPA_KEY !== 'YOUR_ANON_PUBLIC_KEY';
+    this._configured = SUPA_URL !== 'https://bucnbgamejerrdupsdro.supabase.co'
+                    && SUPA_KEY !== 'sb_publishable_MZHKVmPF7g73wSxPYYx1Kg_BusmtRnk';
     if (!this._configured) return;
     try {
       // รองรับทั้ง publishable key (sb_publishable_) และ legacy anon key (eyJ)
