@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FlowFinance v19</title>
+<title>FlowFinance v20</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css">
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
@@ -738,8 +738,8 @@ body{font-family:system-ui,-apple-system,sans-serif;background:var(--bg0);color:
 // 1. ไปที่ https://supabase.com → สร้าง Project ใหม่
 // 2. Settings → API → copy "Project URL" และ "anon public key"
 // 3. วางด้านล่างนี้
-var SUPA_URL = 'https://bucnbgamejerrdupsdro.supabase.co';  // << เปลี่ยน
-var SUPA_KEY = 'sb_publishable_MZHKVmPF7g73wSxPYYx1Kg_BusmtRnk';                  // << เปลี่ยน
+var SUPA_URL = 'https://bucnbgamejerrdupsdro.supabase.co';
+var SUPA_KEY = 'sb_publishable_MZHKVmPF7g73wSxPYYx1Kg_BusmtRnk';
 // รองรับทั้ง 2 format:
 //   format ใหม่: sb_publishable_xxxx  (Publishable key)
 //   format เก่า: eyJxxxx              (Legacy anon key)
@@ -816,8 +816,7 @@ var AuthManager = {
   _configured: false,
 
   init: function() {
-    this._configured = SUPA_URL !== 'https://bucnbgamejerrdupsdro.supabase.co'
-                    && SUPA_KEY !== 'sb_publishable_MZHKVmPF7g73wSxPYYx1Kg_BusmtRnk';
+    this._configured = true; // key ใส่ไว้แล้ว
     if (!this._configured) return;
     try {
       // รองรับทั้ง publishable key (sb_publishable_) และ legacy anon key (eyJ)
@@ -1550,7 +1549,7 @@ function esc(s){if(!s)return'';return String(s).replace(/[&<>"']/g,function(m){r
 function gridColor(){return isDark?'rgba(128,128,128,.12)':'rgba(0,0,0,.08)';}
 function chartTextColor(){return isDark?'#aaa':'#555';}
 function sankeyBg(){return isDark?'#1a1a1a':'#ffffff';}
-var LS_KEY='flowfinance_v19';
+var LS_KEY='flowfinance_v20';
 // lsSave และ lsLoad อยู่ในส่วน Supabase ด้านบนแล้ว
 function lsLoad(){
   try{
